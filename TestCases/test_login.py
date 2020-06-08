@@ -42,14 +42,4 @@ class TestLogin(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-    # def test_login_no_passwd(self):
-    #     self.lp.login("1303845892@qq.com", "")
-    #     self.assertEqual("密码不能为空", self.lp.get_error_msg())
-    #
-    # def test_login_no_username(self):
-    #     self.lp.login("", "nmb_python")
-    #     self.assertEqual("用户名不能为空", self.lp.get_error_msg())
-    #
-    # def test_login_wrong_passwd(self):
-    #     self.lp.login("34", "nmb_python")
-    #     self.assertEqual("用户不存在", self.lp.get_error_msg())
+

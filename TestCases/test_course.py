@@ -23,19 +23,6 @@ class TestCourse(unittest.TestCase):
         cls.lp = LoginPage(cls.driver)
         cls.lp.login(*cd.student_user)
 
-    # def setUp(self):
-    #     warnings.simplefilter('ignore', ResourceWarning)
-    #     # 1.保障游客加入的课程，并当前学生未加入该课程 --老师账号
-    #     c = CourseOper(*cd.teacher_user)
-    #     self.course_id, self.course_code = c.add_courser(cod.course_name, cod.course_name)
-    #     # 2.以学生账号，登录系统
-    #     self.driver = webdriver.Chrome()
-    #     self.driver.maximize_window()
-    #     self.driver.get(cd.login_url)
-    #     self.lp = LoginPage(self.driver)
-    #     self.lp.login(*cd.student_user)
-    #     # self.wait = WebDriverWait(self.driver, 20)
-    #     pass
     @classmethod
     def tearDownClass(cls) -> None:
         cls.driver.quit()
@@ -56,16 +43,6 @@ class TestCourse(unittest.TestCase):
         time.sleep(10)
         # 断言
         self.assertTrue(ip.if_enter_class())
-
-        # self.wait.until(EC.visibility_of_element_located(HomePageLoc.add_class_button))
-        # self.driver.find_element(*HomePageLoc.add_class_button).click()
-        # # 首页：输入课程码
-        # self.driver.find_element_by_xpath('//input[@placeholder= "请输入课程加课验证码"]').send_keys(self.course_code)
-        # # 点击加入
-        # self.driver.find_element_by_xpath('//a[text()= "加入"]').click()
-        # # 断言
-        # self.driver.quit()
-        # pass
 
 
 if __name__ == '__main__':
